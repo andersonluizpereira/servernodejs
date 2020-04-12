@@ -5,7 +5,12 @@ const mongoose = require('mongoose');
 
 const router = express.Router();
 
-mongoose.connect('mongodb://localhost:27017/ads')
+mongoose.connect('mongodb://localhost:27017/ads');
+// Carrega os Models
+const Product = require('./models/product');
+const Customer = require('./models/customer');
+const Order = require('./models/order');
+
 
 const app = express();
 const bodyParser = require('body-parser');
